@@ -1,0 +1,1 @@
+- Reading notes from [Arithmetic expressions](https://wiki.bash-hackers.org/syntax/arith_expr#arithmetic_expressions_and_return_codes)
