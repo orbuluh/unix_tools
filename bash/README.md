@@ -1,6 +1,7 @@
 # bash
 
 ## Cheat sheet
+- [Basic syntax quick reference](BasicSyntax.md)
 - [Cook book](CookBook.md)
 
 
