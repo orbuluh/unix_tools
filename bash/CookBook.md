@@ -3,6 +3,7 @@
 - `kill %%` to kill the "current" or "last stopped" job
 
 # Recursive find and in-place replace
+- NOTE: in mac, `sed -i ''` is the equivalent of `sed -i` for linux
 ```bash
 find . -type f -name "*.md" -print0 | xargs -0 sed -i '' -e 's/range_sum/range_query/g'
 ```
@@ -16,3 +17,6 @@ find . -type f -name "*.md" -print0 | xargs -0 sed -i '' -e 's/range_sum/range_q
 - The variable `optind` is the index of the next element to be processed in `argv`.
 - If `getopt()` finds another option character, it returns that character, updating the external variable `optind` and a static variable `nextchar` so that the next call to `getopt()` can resume the scan with the following option character or argv-element.
 -  legitimate option character is any visible one byte ascii(7) character (for which `isgraph`(3) would return nonzero) that is not `'-'`, `':'`, or `';'`
+
+# Do you really?
+- [snippet](demo/do_you_really.sh)
