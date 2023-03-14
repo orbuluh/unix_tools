@@ -1,4 +1,33 @@
-# Adding git-hook for `git add`
+# Git cookbooks
+
+## Publish local folder to remote
+
+```bash
+cd <folder_path>/<folder_name>
+git remote add origin https://github.com/<username>/<folder_name>.git
+git push -u origin main
+```
+
+## Break changes in one file into several commits
+
+- In Git, a **hunk** refers to a section of a file that contains changes between two versions of the file.
+- A hunk is essentially a block of text within a file that has been modified, added or deleted.
+
+```bash
+# use -p (e.g. abbreviated for patch) to enter the interactive mode for staging
+git add -p that_file
+
+# y to stage the hunk
+# n to skip the hunk
+# s to split the hunk into smaller hunks
+# e to edit the hunk manually
+# q to quit the interactive mode
+```
+
+
+
+## Adding git-hook for `git add`
+
 - [src](https://stackoverflow.com/a/57719088/4924135)
 - [git-attribute](attribute.md)
 - If you want to make git support pre-add hooks, then you can use `filters`
