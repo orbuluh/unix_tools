@@ -1,6 +1,6 @@
 # Basic syntax quick reference
 
-# `for`
+## `for`
 ```bash
 #!/bin/bash
 
@@ -20,7 +20,7 @@ done
 exit 0
 ```
 
-# `switch`
+## `switch`
 ```bash
 VAR=10
 case $VAR in
@@ -31,7 +31,8 @@ case $VAR in
 esac
 ```
 
-# `while`
+## `while`
+
 ```bash
 #!/bin/bash
 cnt=1
@@ -39,4 +40,25 @@ while [ ${cnt} -lt 9 ]; do
     echo "cnt value: ${cnt}"
     ((CTR++))
 done
+```
+
+## array
+
+```bash
+myarray=(1 2 3 4 5)
+echo "array is: ${myarray[*]}"
+
+function addarray {
+    local sum=0
+    local newarray
+    newarray=(`echo "$@"`)
+    for value in ${newarray[*]}
+    do
+        sum=$[ $sum + $value ]
+    done
+    echo $sum
+}
+
+arg1=$(echo ${myarray[*]})
+result=$(addarray $arg1)
 ```
